@@ -1,3 +1,19 @@
-Happy Birthday Repo! 
+# Happy Birthday Repo! 
 
+We did it, took the first step towards a documented, accountable learning plan to span different topics.
+
+# Tidbits
 <!-- ... --> is the format for HTML comments, which are not rendered when displayed on GitHub, so I can use this to make notes without it being visible to readers.
+
+chmod values:
+owner / group / everyone
+
+read = 4
+write = 2
+execute = 1
+
+600 - owner can read/write
+644 - owner can read/write, group can read, everyone can read
+700 - owner full access, nothing for anyone else
+777 - everyone has full access. wide open.
+
