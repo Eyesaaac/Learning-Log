@@ -17,3 +17,6 @@ execute = 1
 700 - owner full access, nothing for anyone else
 777 - everyone has full access. wide open.
 
+"git add "file" OR * for all in a repo if there's major changes all at once.
+git commit -m "comments"
+git push"
