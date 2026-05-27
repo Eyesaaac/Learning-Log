@@ -1,0 +1,15 @@
+Jason Dion CompTIA Security+ Cert Studying
+Section 1 - Introduction: Barebones info on the test itself, nothing of real substance. 90 Questions, combination of PDQs and multiple choice, scored 100 - 900, need roughly 80% to pass.
+Section 2 - Fundamentals of Security:
+-   Difference between Threats and Vulnerabilities
+    - Threat is an exploited vulnerability, without a vulnerability (flaw, gap in controls, bug, etc.) being exploited, there is no threat. Risk posed by a threat is determined by the likelihood of the threat being exploited and the impact of the exploitation.
+    - Vulnerabilities are open channels for an actor to perform malicious activities. Examples include a text field with no input sanitation/validation, a bug in code that allows for malicious injection attacks, etc. Vulnerability patching is the job of a vuln management team, using tools like Nessus or OpenVAS to scan the environment.
+
+- CIANA Triad
+    - Formerly the CIA Triad, this acronym describes the fundamental aspects of infosec. It was expanded to add NA for further clarity.
+        - C : Confidentiality - The expectation that data will be considered private and cannot be accessed by those who are not authorized. (e.g. You can't see my bank account statements unless you have my login info)
+        - I : Integrity -  The expectation that data will not be modified either in transit or at rest, thus keeping the integrity in tact. Think hashing here, if you were to hash a text file, add a new space or character, then hash it again, you will see different values. 
+        - A : Availability - The expectation that a service or product is accessible to authorized individuals whenever it is needed. Uptime can be measured from 99% uptime to 99.99999% in terms of granularity. This also includes power outage accomodations such as generators or UPS systems for keeping the lights on.
+        - N : Non-repudiation - The idea that once data is sent, the receiving party has no way to claim that they did not receive the data. Email signatures are a prime example.
+        - A : Authorization - Permissions or priviliges that are granted to users once they have been authenticated. (Example, RBAC groups excluding a user from accessing the admin interface for a tool until they have the proper permissions.)
+
