@@ -16,7 +16,7 @@ I'm working in infosec and want to document my self-paced learning for cybersecu
 - resources/ - references, cheat sheets, good-to-know graphics
 
 # Focus 1 (May - June) - "Foundations V2"
-Foundations as a name might sound like I have no faith in myself, but I want to refresh my knowledge from the ground up, to avoid issues with "what's this concept again?" or "what port does that run on?" and while we live in an era where these small gaps of knowledge can be bridged with a single prompt or search, this builds an emotional foundation as well, an ego for lack of better terms. I will review the building blocks of my topics of interest to prove that I know what I'm talking about.
+Foundations as a name might sound like I have no faith in myself, but I want to refresh my knowledge from the ground up, to avoid issues with "what's this concept again?" or "what port does that run on?" and while we live in an era where these small gaps of knowledge can be bridged with a single prompt or search, this builds an emotional foundation as well- an ego for lack of better terms that will combat the impostor syndrome. I will review the building blocks of my topics of interest to prove that I know what I'm talking about.
 
 -Linux 
 -Python
