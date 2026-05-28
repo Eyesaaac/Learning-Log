@@ -1,0 +1,44 @@
+## Section 2 - Fundamentals of Security:## 
+-   Difference between Threats and Vulnerabilities
+    - Threat is an exploited vulnerability, without a vulnerability (flaw, gap in controls, bug, etc.) being exploited, there is no threat. Risk posed by a threat is determined by the likelihood of the threat being exploited and the impact of the exploitation.
+    - Vulnerabilities are open channels for an actor to perform malicious activities. Examples include a text field with no input sanitation/validation, a bug in code that allows for malicious injection attacks, etc. Vulnerability patching is the job of a vuln management team, using tools like Nessus or OpenVAS to scan the environment.
+
+- CIANA Pentagon
+    - Formerly the CIA Triad, this acronym describes the fundamental aspects of infosec. It was expanded to add NA for further clarity.
+        - C : Confidentiality - The expectation that data will be considered private and cannot be accessed by those who are not authorized. (e.g. You can't see my bank account statements unless you have my login info)
+        - I : Integrity -  The expectation that data will not be modified either in transit or at rest, thus keeping the integrity in tact. Think hashing here, if you were to hash a text file, add a new space or character, then hash it again, you will see different values. 
+        - A : Availability - The expectation that a service or product is accessible to authorized individuals whenever it is needed. Uptime can be measured from 99% uptime to 99.99999% in terms of granularity. This also includes power outage accomodations such as generators or UPS systems for keeping the lights on.
+        - N : Non-repudiation - The idea that once data is sent or a transaction occurrs, either party has no way to claim that they did perform an action. Email signatures are a prime example.
+        - A : Authorization - Permissions or priviliges that are granted to users once they have been authenticated. (Example, RBAC groups excluding a user from accessing the admin interface for a tool until they have the proper permissions.)
+
+- Control Categories
+    - Categories of Security Controls that are used to protect an environment.
+        - Physical Controls - Any physical control meant to deter or prevent access. Think badge readers, barbed wire fences, security guards, etc.
+        - Managerial/Administrative Controls - Management-level controls, coordinating from a risk management/governance perspective. Think security awareness training, risk assessment of new vendors or solutions, etc.
+        - Operational Controls - Process or procedural controls. Think password complexity and age requirements, DB backup processes, etc.
+        - Technical Controls - Any technological, software or hardware control that is designed to respond automatically. Firewalls, antivirus, EDR, IDS, etc.
+
+- Security Control Types
+    - Different types of security controls
+        - Preventative Controls - proactive measures, meant to thwart malicious activity. Think firewalls blocking incoming traffic from bad IPs. (Build our foundation)
+        - Deterrent Controls - security controls that are meant to discourage potential attackers by making them think it is too much effort or not worth their time. Examples include warning signs, banners on websites explaining monitoring, etc. (Discourage threats)
+        - Detective Controls - security controls designed to monitor for and alert on malicious activities as they occur (or shortly after). Think detection rules in a SIEM or an IDS tool. (Keep a watchful eye.)
+         - Corrective Controls - controls to mitigate damage and restore systems to their normal state. Examples include EDR tools completing quarantine activity on a malicious executable, or restoring a server hit with ransomware to a previous version. (Jump in during emergencies)
+         - Compensating Controls - alternative measures that are implemented when the initial security controls are not feasible or effective. Example given, a legacy system can't use WPA3 and therefore needs to use WPA2 with a VPN on top. The compensating control is using the workaround to maintain security even if it's not the perfect solution. (Offer backups and mitigations)
+         - Directive Controls - Policy/Documentation that set the standards for behavior in an organization. An Acceptable Use Policy is a great example of a directive Control. (Guide the entire process)
+
+- Zero Trust Architecture.
+    - The concept of not trusting any entity in your environment just because they are within the permiter of your security controls. This forces additional layers of authentication (2FA, MFA, SAML?) to prove you are who you say you are before being granted access to the secured data.
+    - Trust nothing and verify everything.
+    - To correctly set up a Zero Trust network, there are two different planes that must be used.
+        - Control Plane - Lays out the policies and procedures. The framework for defining, managing, and enforcing the policies related to user/system access.
+        - Data Plane - Ensures the policies from the Control Plane are properly followed.
+
+- Gap Analysis 
+    - Evaluation of an organizations security controls to understand where they're at now versus where they want to be. Reviewing tooling to improve and close gaps in security posture.
+    Define the scope of the analysis, gather data on current controls, identfy gaps, develop a plan to address those gaps, and finally, implement the plan to improve the security posture.
+
+## Quiz Time ##
+4/5
+
+Q1) Vikas, a developer at Dion Training, just digitally signed the company's new app before releasing it in the App Store. Before the app is installed, the user's device will validate the digital signature to ensure that it was actually developed and uploaded by Dion Training. Which of the following pillars of the CIANA pentagon is she focused on? - The correct answer is Non-repudiation, as it ensures that a party in a transaction can't deny having performed an action. I initially chose authentication on a 50/50, ruling out Availability and Confidentiality. What tripped me up was thinking of non-repudiation in a strictly  (email send -> "i didn't get that email!" -> proving that the recipient did in fact receive it) workflow.
