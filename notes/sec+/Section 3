@@ -1,0 +1,20 @@
+## Section 3: Threat Actors ##\
+
+- Threat Actors:
+    - Individuals or entities that are responsible for incidents impacting security of an organization. Categorized into the following 5 types:
+        - Unskilled Attackers
+        - Hacktivists
+        - Organized Crime
+        - Nation State Actors
+        - Insider Threats
+    - Motivations of Threat Actors are categorized under the following groups:
+        - Data Exfil
+        - Blackmail
+        - Philosophical / Political Beliefs
+        - Ethical Reasons
+        - Espionage
+        - Revenge
+        - Service Disruption
+        - Disruption or Chaos
+        - Financial Gain 
+        - War

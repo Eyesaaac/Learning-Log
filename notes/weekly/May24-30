@@ -1,10 +1,18 @@
 1.5 hr of Jason Dion CompTIA Security+ Cert Studying - Appended notes to Section 1 and 2 of sec+ notes.
 
-Read https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/- 
+## Additional Readings/Reflections:
+
+https://www.anthropic.com/news/claude-opus-4-8 - Claude Releases Opus 4.8
+
+My thoughts : Another Opus update, whoop dee doo! Interesting seeing the benchmarks change from 4.7, but I hear through other channels that it burns tokens at a 5x rate in comparison to the previous version. Need to read into this more, but currently tokens aren't a constraint and playing around with the new model is more important than the cost. 
+
+https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/- 
 
 My thoughts : Standard response from OpenAI on another security issue impacting their products. I think across all organizations we should be prepared for an increase in supply chain attacks as they are such an easy and effective method for intrusion into a company given how much is built upon some of these libraries. Think of how many dependencies are in a given organizations' codebase. TanStack might be small but another npm compromise could extend beyond what we've seen before. Mythos will have a field day with some of these repos.
 
 https://www.reddit.com/r/cybersecurity/comments/1tp73x5/glassworm_takedown_yearlong_developer_supply/
+
+My thoughts : Another supply chain compromise, this time attributed to GlassWorm. The malicious VSCode extensions are something that I'm still surprised there aren't tighter controls around- for instance I'm curious what measures are taken to scan/validate that newly added extensions don't contain malware as in this instance keyloggers were installed and exfiltrated crypto wallets, npm credentials, GitHub tokens, etc to GlassWork C2 infrastructure. Good to know that the C2 infra is down as of now but Microsoft's recalcitrance to take down the extensions or notify affected users of the malware is not a good sign. There must be more investigation happening internally.
 
 
 
