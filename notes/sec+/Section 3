@@ -7,14 +7,15 @@
         - Organized Crime
         - Nation State Actors
         - Insider Threats
-    - Motivations of Threat Actors are categorized under the following groups:
+    - Motivations of Threat Actors are categorized under the following groups: (It is important to note that the *intent* and *motivation* of a threat actor are different)
         - Data Exfil
         - Blackmail
-        - Philosophical / Political Beliefs
-        - Ethical Reasons
+        - Philosophical / Political Beliefs - Primary motivation for hacktivists, actions will include things like data leaks or website defacement.
+        - Ethical Reasons - This was reserved for instances of ethical hacking (penetration testing)
         - Espionage
-        - Revenge
+        - Revenge - self explanatory
         - Service Disruption
-        - Disruption or Chaos
+        - Disruption or Chaos - Some people just want to watch the world burn.
         - Financial Gain 
-        - War
+        - War - In times where crippling infrastructure can be done without bombs, cyber warfare is a common activity of nation-state actors.
+
