@@ -1,0 +1,29 @@
+## Section 5 : Social Engineering
+
+- Overview: Social Engineering - The art of manipulating a human through psychological means to gain access to a system or gain valuable information for their attack. Using motivational triggers such as fear, authority, urgency, likability, etc. to achieve their goals.
+
+- Motivational Triggers - The triggers that an attacker will use to attempt to manipulate the victim, playing on their emotions using the following:
+    - Authority - Pretending to be in a position of power over the victim.
+    - Urgency - Self-explanatory. "You have 30 minutes to wire me .0125 BTC or else I send IRS agents to your house!!!"
+    - Social Proof - A phenomenon where people look to others for behavior/action so that they may mimic it. Attacker could say they talked to X person last time they needed their password reset and avoided needing to authenticate.
+    - Scarcity - the idea to act quickly because a product/opportunity is limited or in short supply.
+    - Likability - Self explanatory. Being a nice guy over the phone will get you far.
+    - Fear - Self explanatory. Inspiring fear of something bad, painful, dangerous, etc to the victim to entice them to bend to the attacker's will.
+
+- Impersonation - Pretending to be someone you're not, e.g. pretending to be a law enforcement agent, IT support, etc. to appeal to authority.
+
+- Pretexting - Setting the scene to a victim to give a believable scenario in which to trust the attacker. 
+
+- Phishing Attacks - Email, phone, text, etc. based attacks to get a victim to click a link, call a phone number, reply to a text, engage with the attacker in some way.
+
+- Preventing Phishing Attacks - General best practices for preventing phishing attacks include checking header info, spoofed sender details, mismatched URL's, unexpected attachments, bad grammar/spelling (which seems outdated given how many AI-based phishing attacks are being leveraged currently) and pressing urgency to respond.
+
+- Conducting an Anti-Phishing Campaign - Governance and awareness teams are mainly responsible for these campaigns, and are good to get a baseline for how susceptible an organization is to being phished. Good metrics can be pulled, but it is a constant battle between making campaigns too easy for most people and keeping click rate low, or actually testing the org and getting higher numbers (which management doesn't like to see) which will lead to more teachable moments. Best practice for after running a campaign is to make the clickers take mandatory phishing awareness training.
+
+- Frauds and Scams - Sextortion, identity theft, identity fraud, etc.
+
+- Influence Campaigns - Social media campaigns meant to spit out misinformation or disinformation in the efforts of clouding real data. Poignant in the 2016 election.
+
+- Other Social Engineering Attacks - The only one from the list that I wasn't aware of was "baiting" which is just the act of dropping a rubberducky. Other examples included shoulder surfing, tailgating/piggybacking, hoaxes, and eavesdropping. 
+
+- Quiz - 5/5, light work.
