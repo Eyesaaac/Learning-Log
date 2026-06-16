@@ -1,15 +1,37 @@
-## Section 6 : Malware
+Section 6 : Malware
 
 This section goes over the different types of malware, and includes a module on indications of malware attacks and malware attack techniques.
 
 - The different types of malware are
-    Viruses -
-    Worms -
-    Trojans -
-    Ransomware -
-    Rootkits -
-    Backdoors -
-    Logic Bombs -
-    Keyloggers -
-    Spyware -
-    Bloatware -
+    Viruses - Malicious files that hide within legit files, commonly seen harming a host system's legitimate files.
+    Worms - Self-propogating and laterally moving malware. Stuxnet is an example of a worm.
+    Trojans - Malware that disguises itself as legitimate software, think Trojan horse.
+    Ransomware - Malware that encrypts files and demands a ransom for a decryption key.
+    Rootkits - These are used to deepen and maintain a foothold within a system, allowing for further exploitation of the host.
+    Backdoors - A way to enter a host that was previously unknown and has little to no security controls around it. Heartbleed is an old example of a backdoor.
+    Logic Bombs - Code embeds that perform malicious activity under certain parameters. A scheduled task that is set to go off at 11:59PM to SSH to an external server is an example.
+    Keyloggers - These will record/log your keystrokes in the hopes of capturing password data or other sensitive information you input.
+    Spyware - Malware intended to spy on a victim, can be using microphone capture, webcam, etc.
+    Bloatware - Malware designed to slow down a system or drain its resources. Think of all the shit that gets downloaded onto your machine if you buy a prebuilt. McAfee, I'm looking at you.
+
+
+Quiz : 4/5 - Picked the second best choice for a question.
+
+Question: Which of these is a common indication of a malware attack?
+
+Decreased resource consumption
+Reduced number of account lockouts
+Appearance of unkonwn software on the user's system -- My choice
+Fewer logs than ususal during peak hours -- Correct Choice.
+
+
+- There are 9 primary indications of malware attacks:
+Increased account lockouts
+Concurrent session utilization
+Increases in blocked content
+Impossible Travel
+Increased resource consumption
+Resource inaccessibility
+Out-of-Cycle logging
+Missing logs (or fewer logs than usual during peak hours)
+Documented attacks.

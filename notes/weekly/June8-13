@@ -1,1 +1,6 @@
-Section 4 of Dion Sec+ Training Courses this week.
+Section 4 and 5 of Dion Sec+ Training Courses this week.
+
+https://daniel.haxx.se/blog/2026/05/11/mythos-finds-a-curl-vulnerability/ 
+
+My thoughts: A very real retelling of Mythos's impact after all of the chatter about how dangerous it could be in the wrong hands or for underprepared organizations. Do I think that Mythos is a bust? Not at all, but I think the narrative that it's the perfect vulnerability scanner and exploit agent is a bit far fetched currently. It will make people's lives hell if they write anything less than secure code, but having your code be exploited is a symptom of a much larger problem there.
+Edit: Now with Mythos and Fable 5 being frozen by the government's decree, there is more breathing room surely, but the day will come again where Mythos/Fable are brought back to the public, and then where will we start off again?
