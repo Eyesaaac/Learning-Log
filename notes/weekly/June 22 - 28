@@ -1,0 +1,8 @@
+Finished Section 7 of Dion trainings
+
+SSL - Secure Sockets Layer
+TLS - Transport Layer Security
+
+Both of these are cryptographic protocols that are designed to provude secure communication over a network.
+
+IPSec - Internet protocol security - A protocol suite used to secure comms by authenticating and encrypting each IP packet in a data stream.

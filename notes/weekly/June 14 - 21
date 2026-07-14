@@ -2,3 +2,8 @@ Section 6 and 7 of Dion Security+ training course.
 
 
 - Using the Source Control function of VScode is a great little way to keep a track of prior commits as well as not needing to specify files using a terminal.
+
+While I still have access to Immersive nee ImmersiveLabs, I'm taking advantage of the training courses they have there as well. Currently going through OWASP Top 10 for Agentic Applications course modules, which include:
+
+    - Agent Goal Hijacking
+    - Agentic Supply Chain Vulnerabilities
