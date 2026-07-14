@@ -1,1 +1,42 @@
 Section 7 : Data Protection
+
+Data Ownership: Data Owners are the executive role that is responsible for labeling and protecting the data under their ward. Data controllers are the entities that are responsible for deciding the purposes and methods of storage, collection, etc. Processors are hired to help with collecting, storing and analyzing the data. Data Stewards are focused on the quality of the data. Custodians are responsible for handing the management of the system on which data assets are stored. Sysadmins would be considered Data Custodians.
+
+Data States:
+    - Data at Rest - any data stored in databases, file systems, or other storage systems.
+        This is where data is encrypted, using techniques such as Full Disk Encryption, Partition Encryption, File Encryption, Volume Encryption, Database Encryption, and Record Encryption.
+        - FDE - Encrypts the entire hard drive.
+        - Partition Encryption - encrypts specific partitions of a hard drive, leaving others unencrypted.
+        - File Encyrption - encrypts individual files
+        - Volume Encryption - Encrypts a set of selected files or directories.
+        - Database Encryption - encrypts data stored in a database. Can be done at the column, row, or table level
+        - Record Encryption - encrypts specific fields within a database record. Useful when multiple users are accessing a database but don't have the same level.
+    - Data in Transit - data that is moving between rest, as in data being sent over the internet using email or cloud upload, or private network. Vulnerable to interception during it's movement.
+    - Data in Use - this refers to data in the process of being created, retrieved, updated, or deleted.
+
+Data Types: 
+    - Regulated Data: This is where data such as PII, PHI, PCI, HIPAA or GDPR protected data is classified. Info that is controlled by laws, regulations, standards, etc.
+    - Trade Secrets: The secret sauce of a company, which gives them a competetive edge in their industry.
+    - Intellectual Property: "Creations of the mind" such as inventions, literary and artistic works, etc.
+    - Legal info: self-explanatory.
+    - Financial Info: self-explanatory. PCI-DSS info
+    - Human-readable vs. Non-human readable data: Self explanatory.
+
+Data Sovereignty: The concept that digital information is subject to the laws of the country in which it is located. GDPR is a great example here, as companies that might not be based in Europe will still be held to GDPR regulations if they have data they maintain within the geolocation of Europe (i.e. use server hosting in Amsterdam for customer data)
+
+Securing Data: The methods used to secure data in any of its forms. Methods include geofencing, encryption, hashing, masking, tokenization, obfuscation, segmentation and permissions restrictions.
+
+- Geographic restrictions: Blocking access to data from certain countries or locations, for example not allowing access to sensitive data from an IP based in China.
+- Encryption : Encrypting data by transferring it from readable to unreadable data using an algorithm and encryption key.
+- Hashing: Converting data to a fixed size of numerical characters. This is a one-way solution, you can't unhash a file.
+- Masking: Replacing some or all of the data within a field with placeholders such as "*" or "X" to conceal orignial content. Think when you put in a CC number to a field and click out, it masks all but the last 4 digits.
+- Tokenization: Replacing sensitive data with non-sensitive substitutes, known as tokens. 
+- Obfuscation: Making data unclear or hard to read, making it difficult to understand. Using pseudonyms or masking or encryption.
+- Segmentation Dividing a network into multiple segments, making it hard for a threat actor to access all of the data needed from being in one segment.
+- Permissions Restrictions: RBAC rules to exclude unauthorized users from accessing data.
+
+Data Loss Prevention (DLP): A system created to monitor users for attempts at exfiltrating, mishandling, or straight up stealing data. Netskope, AdaptiveDLP and Defender DLP are examples of this that I've worked with in the past. Includes hardware and software DLP systems, ones that sit on your machine or on the network to identify malicious handling of sensitive data. 
+
+Configuring a DLP:: This was a 15 minute walkthrough of setting up DLP rules in Google Admin console.
+
+Quiz: 5/5, light work.

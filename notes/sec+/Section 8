@@ -1,0 +1,29 @@
+Section 8 covers Cryptographic Solutions, and focuses on objectives 1.4, 2.3, and 2.4.
+
+Cryptographic Solutions:
+
+Symmetric vs Asymmetric: Symmetric algorithms have the same encryption/decryption keys whereas asymmetric will have a public and private key, public for encryption and private for decryption.
+
+Symmetric Algorithms: DES, 3DES, AES, IDEA, Blowfish, Twofish, and RC4,RC5, and RC6 are all symmetric algorithms, with all but RC4 being block ciphers. RC4 is a stream cipher, and generally less secure than the other RC ciphers, except 1 2 and 3. AES is the most widely used and most secure of the symmetric key algorithms.
+
+Asymmetric Algorithms:
+
+Hashing:
+
+Increasing Hash Security:
+
+Public Key Infrastructure (PKI):
+
+Digital Certificates:
+
+Exploring Digital Certificates:
+
+Blockchain:
+
+Encryption Tools:
+
+Obfuscation:
+
+Cryptographic Attacks:
+
+Quiz:
