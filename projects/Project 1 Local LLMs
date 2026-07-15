@@ -1,0 +1,15 @@
+Getting Ollama set up and using a local LLM to compare models and see what I like more. 
+
+gemma4, initial impressions:
+
++ I like how it displays its reasoning, and the in depth thought is helpful to get a sense of how it prioritizes parts of a prompt. 
+- Running into formatting issues (VScode) and some output issues, either a token limit or self imposed rule that truncates output but the content itself hasn't been in question here.
+
+north-mini-code-1.0: 
+
+- large file size, low(er) end of context windows.
+- thinking is far less robust thought output, does not talk through its thoughts as verbosely.
+
+qwen3.6:latest
+
+- largest file size of all 3
