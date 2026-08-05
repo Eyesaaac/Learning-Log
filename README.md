@@ -20,11 +20,14 @@ Foundations as a name might sound like I have no faith in myself, but I want to 
 
 - Linux 
 - Python
-`- Networking Fundamentals (looking to branch this out to Network Admin and Network Analysis.)
+- Networking Fundamentals (looking to branch this out to Network Admin and Network Analysis.)
+
+# Focus 2 (July - August) - "Red Vs Blue"
+Continuing my learning through Dion Training's Sec+ course, looking to take the exam by end of October.
 
 # Roadmap (October 30th, 2026 Phase 1 End Date)
 
-- [ ] **OBJ 1** - "Foundations V2"
+- [X] **OBJ 1** - "Foundations V2"
 - [ ] **OBJ 2** - "Red Vs Blue" - Offensive security concepts, Defense/SOC related labs and web-security concepts. Real ball knowers will appreciate that reference.
 - [ ] **OBJ 3** - "Enter The Matrix" - AI-assisted tooling development and building. Not focused on creating perfect tools, but iterating on the process using AI.
 - [ ] **OBJ 4** - "How Did We Get Here?" - Working review, future objectives, what to explore next. (November -> ??)
