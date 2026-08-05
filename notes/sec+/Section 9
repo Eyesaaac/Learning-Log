@@ -1,0 +1,28 @@
+Section 9 : Risk Management, covering objective 5.2.
+
+Risk Management : The process that involves identifying, analyzing, treating, monitoring, and reporting of risks in an environment.
+
+Risk Assessment Frequency: How often risk assessments are conducted in your company. This can be influenced by things such as regulatory requirements, internal policy, or other external stimuli.
+
+Risk Identification: Identifying risks in an environment.Tracked via useful acronyms such as:
+
+Recovery Time Objective (RTO) - the max acceptable time that can pass before lack of business function severely impacts the organization. 
+Recovery Point Objective (RPO) - Maximum acceptable amount of data loss, measured in time. Ex: If an org has an RPO of 4 hours, it can tolerate a data loss of up to four hours.
+Mean Time to Repair (MTTR) - Average time required to repair a failed component or system.
+Mean Time Between Failures (MTBF) - Average time between failures. Measures reliability of a system or component.
+
+Risk Register: Also known as a risk log, this is a document that details identified risks, including their likelihood, and mitigation strategies, as well as risk level, and cost associated.
+Risk Appetite signifies an organization's willingness to embrace or retain specific types and levels of risk to fulfill it's org goals. Types of risk appetite include
+Expansionary (Open to taking more risk for more returns.)
+Conservative, opposite of Expansionary.
+Neutral, as it's named.
+
+Qualitative Risk Analysis: A method of assessing risks on the ier potential impact and the likelihood of their occurrence. Subjective and relies on expertise of project team and stakeholders.
+
+Quantitative Risk Analysis: A numerical method of assessing risks using items such as Single Loss Expectancy (SLE), Annualized Rate of Occurence (ARO), Annualized Loss Expectancy (ALE), and Expected Frequency (EF). Mathematical way to identify risk.
+
+Risk Management Strategies: Different types of managing risk include Transference (Risk sharing) which shifts the risk to another paty or org. Insurance is the most common method of risk transference. Risk Acceptance is aptly named, as it means to address the risk when it happens. Used when the cost of the risk is more than the expected loss from the risk coming to fruition. Risk avoidance involves alerting plans or approaches to completely avoid the risk. Risk Mitigation involves implementing measures to decrease the likelihood or impact of the risk.
+
+Risk Monitoring and Reporting: The final step of the risk management process. Monitoring involves tracking identified risks, assessing new risks, executing response plans, and evaluating effectiveness of response plans during a project. Residual Risk is the likelihood and impact AFTER implementing mitigation, transference, or acceptance measures on the initial risk. A Control Risk is an assessment of how a security measure has lost effectiveness over time.
+
+Quiz: 4/5, missed on the term "Risk Appetite" as my definition did not include residual risk. I now understand that Risk Appetite is the amount of residual risk a company is willing to accept.

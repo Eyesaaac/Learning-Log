@@ -6,24 +6,10 @@ Symmetric vs Asymmetric: Symmetric algorithms have the same encryption/decryptio
 
 Symmetric Algorithms: DES, 3DES, AES, IDEA, Blowfish, Twofish, and RC4,RC5, and RC6 are all symmetric algorithms, with all but RC4 being block ciphers. RC4 is a stream cipher, and generally less secure than the other RC ciphers, except 1 2 and 3. AES is the most widely used and most secure of the symmetric key algorithms.
 
-Asymmetric Algorithms:
+Asymmetric Algorithms: Do not require a shared secret key, often referred to as public key cryptography. A digital signature is a hash digest of a message encrypted with the sender's private key that can be decrypted by using their public key to prove the person who sent the document is the real sender. Diffie-Hellman, RSA, and ECC are all asymmetric algorithms.
+    Diffie-Hellman is used for the key exchange inside of creating a VPN tunnel as part of IPSec.
+    RSA relies on the mathematical difficulty of factoring large prime numbers. Supports key sizes of 1024-bits to 4096-bits.
+    ECC is a much more secure algorithm, based on the usage of elliptic curves in a finite field. A 256-bit key with ECC is just as secure as RSA with a 2048-bit key. Most commonly used for mobile devices and low-power computing devices.
 
-Hashing:
 
-Increasing Hash Security:
-
-Public Key Infrastructure (PKI):
-
-Digital Certificates:
-
-Exploring Digital Certificates:
-
-Blockchain:
-
-Encryption Tools:
-
-Obfuscation:
-
-Cryptographic Attacks:
-
-Quiz:
+Quiz: 4/5, missed one for choosing an asymmetric encryption algorithm when I needed to choose the algorithm that is designed for exchanging keys over a tunnel (Diffie Hellman).
