@@ -1,0 +1,9 @@
+Found a cool demo on Steam for a "hacker" game that goes through some fun packages used for ethical hacking. 
+
+bettercap - https://www.bettercap.org Used bettercap to get a pcap of devices trying to auth to the network I masqueraded as.
+hashcat - https://www.hashcat.net Used hashcat to break the password from the pcap file I procured.
+little bit of nmap usage
+hydra for brute forcing passwords to get into a fake database
+lynx for information gathering on a user
+
+Ultimately this is a gamified way to go over certain hacking tools and methodologies without the pain of setting those tools up and familiarizing yourself with the commandline itself. The game gives the commands to run and is generally on rails, but the value of the game is there. I think I'd rather just set up a VM with Kali Linux and mess around with an attacker/victim PC setup through VM's.
