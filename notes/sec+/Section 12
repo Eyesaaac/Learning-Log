@@ -1,0 +1,48 @@
+Section 12: Asset and Change Management. Objectives 1.3, 4.1, 4.2.
+
+Quiz: 3/5 on this- I missed on mobile device management policies CYOD vs COPE vs BYOD, and missed on data disposal methods. Will complete the course in full.
+
+Asset and Change Mangement: Assets (hardware assets, software apps, etc.) and Change (modifications, software updates, tech implementations) management. 
+
+Acquisition and Procurement: acquisition is just the "getting" of an asset, but procurement entails all of the researching and steps prior to purchasing as well.
+
+Mobile Asset Deployments: Talks about the different ways organizations will deploy and manage mobile devices for their users.
+    BYOD (Bring Your Own Device): Your personal phone will be managed by the organization through installing an app manager such as InTune or Company Portal
+
+    COPE (Corporate Owned, Personally Enabled): Organization buys the phone and secures it, but gives it to the user for work/personal use. More expensive than BYOD.
+
+    CYOD (Choose Your Own Device): The organization provides a list of approved phones that can be used and the user will choose from that list. The middle ground between COPE and BYOD.
+
+Asset Management: This refers to the approach to governing and maximizing the value of items an entity is responsible for throughout their lifecycle. This section includes Mobile Device Management (MDM) solutions such as InTune/Company Portal, and other things like tagging/classification, monitoring/tracking.
+
+Asset Disposal and Decommissioning: Self explanatory, this section goes over how assets are destroyed/recycled to ensure regulatory compliance or data security. There are 3 different branches of this process
+    Sanitization - Thoroughly making data inaccessible and irretrievable from a storage medium using traditional forensic methods.
+        Overwiting data - replacing existing data on a device with random data to ensure original data is obscured. This happens multiple times, either singe pass, 7 passess, or 35 passes. Each overwrite makes it more difficult for adversaries to retrieve data using forensic tools.
+        Degaussing - Using a degaussing machine to create a magnetic field that will disrupt the magnetic domains of the hard drive and completely erase the data within. This kills the storage device entirely. Valuable when the device is going to be recycled or thrown out.
+        Encryption Techniques - Things like Secure erase/Cryptographic Erase (CE is more modern) will encrypt the data and deliberately destroy the encryption key, making the data unreadable and therefore irretrievable. It is much faster than other erasure methods and still keeps the drive functional.
+    Destruction - Ensures the physical device itself is beyond recovery or reuse. Shredding, Pulverizing, Melting or Incinerating a storage drive for example.
+    Certification - The act of proving the data or hardware has been securely disposed of.
+
+Change Management: This covers the concept of change management, and the planning and structured approach to transitioning from existing state to a more desireable future state.   
+    Notable acronyms: [CAB], Change Advisory Board: they are the body of representatives of an org that are responsible for evaluation of proposed changes.
+    Change Owner - the individual or team that initiates the change request.
+    Impact Analysis - An analysis on what will be the state of the environment if the change goes awry. Essentially asking what could go wrong, and what the immediate effects to the business or operations would be.
+
+Change Management Processes: The beginning to end of the change management process. 
+    Preparation: Assessing the current state and recognizing the need for a transition to occur. Identify deficiences and challenges, gather resources, engage stakeholders, etc.
+    Vision for Change: A clear, compelling description of the desired future state. Explain reasons for the change, and ensure vivid and inspiring vision.
+    Implementation: Put the plan/vision into action. Requires restructuring of teams, training, introducing new tech, and continuously communicating with stakeholders.
+    Verification: Measuring the change's effectiveness by comparing it to the initial objectives, and the previous state. Performance metrics analysis and surveys are huge here.
+    Documentation: Creating a thorough record of the entire process so it can be kept documented and things like lessons learned are accessible.
+Things like scheduled maintenance windows, a backout plan, and standardized operating procedures are all very important for the change management process as well.
+
+Technical Implications of Changes: This section covers the technical implications of changes and how they need to be considered when initiating the change management process. Elements covered include the following:
+    Allow and Deny Lists: Permitted vs Prevented entities, allow and deny lists should be placed to ensure proper system function and uncompromised security.
+    Restricted Activities: Some tasks or operations can be restricted as they can impact a systems health. Knowing restrictions can prevent data breaches or operational problems.
+    Complex Applications Interplay: Downtime, service and application restarts. Data may be lost in transit or backlog can be created during downtimes or restarts. 
+    Dependencies: Apps that rely on other services or systems can be affected during a change. 
+Technical implications of proposed changes involve understanding and grasping potential impact of changes.
+
+Documenting Changes: Very self explanatory. This just covers the documentation of the change management process, including what was done and how it was done. Version control and proper documentation updates are performed.
+
+Quiz: 5/5, no change in the questions but still didn't trip over what I had in the beginning.

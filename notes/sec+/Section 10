@@ -1,0 +1,33 @@
+Section 10: Third Party Vendor Risks - Dion Training.
+
+Ooh boy, looking forward to this one- *Borat voice* NOT.
+
+Third Party Vendor Risk is the term used to describe the risks and challenges associated with keeping a third party vendor relationship. Vendors could be suppliers, service providers, etc.
+
+-Following Sections-
+
+Supply Chain Risks: This section goes over different types of supply chain risks. They are:
+- Hardware Manufacturers: Product manufacturing risks (poor quality control, leads to product breaking down), Purchases of additional hardware from secondary or aftermarket sources (could be tampered with or less effective)
+
+- Software Developers: Risks include unsigned and unverified software, software with malicious code embedded, and software with known or exploitable vulnerabilities.
+
+- MSPs and MSSPs: The risks here are essentially the risks that your org can face, but perhaps the MSP doesn't take the same approach to mitigating risk or doesn't have as strict security. Their access to your environment can be a risk if they are compromised down the line and you don't react fast enough to cut their access.
+
+Supply Chain Attacks: This section covers supply chain attacks, which is an attack on a weaker link in the supply chain to gain access to a primary target. 
+- Solarwinds was the example covered here, where attackers compromised the Solarwinds Orion updater to spread malware to all of the Solarwinds customers.
+
+Vendor Assessment: This is a process to evaluate the security or reliability of a vendor or external entity. This involves vendors, suppliers, or MSPs. Consider a penetration test on these vendors as well.
+
+Vendor Selection and Monitoring: This was extremely straightforward if not common sense. You want to choose the best vendor possible, and not just take their word for it- go for client testimonials, give them a vendor questionnaire, look for conflicts of interest in the selection team, and after establishing a connection with the vendor, continually monitor their output and performance to make sure they adhere to your requirements. Duh.
+
+Contracts and Agreements: This section goes over the types of additional contracts or agreements that are needed when partnering with a vendor. They include 
+- Basic Contract - self explanatory, establishes a relationship between two parties.
+- Service-Level Agreement (SLA) - This outlines timelines for response and standards of service that a company can expect.
+- Memorandum of Agreement (MOA) - More formal agreement that outlines specific responsibilities and roles of involved parties.
+- Memorandum of Understanding (MOU) - Less formal, but a declaration of mutual intent.
+- Master Service Agreement (MSA) - Blanket agreement covers general terms of engagement between parties across multiple transactions.
+- Statement of Work (SOW) - Specifies details for a particular project, getting into the weeds of an MSA.
+- Non-Disclosure Agreement (NDA) - Do not share sensitive information during negotiations, all details must be kept secret.
+- Business Partnership Agreement (BPA) - This goes a step beyond a basic contract- two entities decide to pool their resources, this determines who is responsible for what. Example- two firms want to work together to launch a product, they'd use a BPA to sort out who is responsible for what. Also called a Joint Venture (JV).
+
+Quiz: 5/5, light work.
