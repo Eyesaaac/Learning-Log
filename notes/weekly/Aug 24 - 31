@@ -1,0 +1,32 @@
+Going through more Immersive training modules today, as well as Section 14 in Dion Trainings. I have PTO for Thursday-Friday as I'll be away but will crack on next week.
+
+Immersive Entra ID Foundations course:
+
+EntraID is a flat tenant of users, groups, and other objects. No servers to patch, no forests, no domains, no OUs (organizational units) and no domain controllers. You use Microsoft Intune to configure device settings.
+
+Azure AD is a hierarchy, with a forest sitting at the top as the security boundary. Inside AD are domains, run by domain controllers. These domains contain OUs built by admins that can push settings through Group Policies (GPs)
+
+What it does                                    | Traditional Active Directory                              | Microsoft Entra ID
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Prove who a user is (authentication)            | Kerberos (or legacy NTLM)                                 | OpenID COnnect (OIDC), or SAML for many SaaS apps
+Grant an app scoped permissions (authorization) | No dedicated protocol, so access follows group membership | OAuth 2.0
+Read the directory                              | LDAP                                                      | Microsoft Graph
+
+
+
+Administrative Units - Like an OU but you cannot nest them, and the scope who can manage objects, not who can see them. Example: creating an administrative unit to let helpdesk users reset passwords only for their own OU/region.
+
+Objects inside a tenant
+
+    Users: Every person is a user object. One property, the user type, shapes what they can do:
+        Member: Employees, usually.
+        Guest: External users, vendors, etc. whose usernames carry an #EXT# tag.
+    
+    Groups: these let you manage multiple users at once.
+        Security Groups: Control access to resources. Members can be users, devices, or even apps.
+        Microsoft 365 groups; Support collaboration, giving members a shared mailbox, calendar and SharePoint site.
+
+    Service Principals and Managed Identities:
+        Service principal: An apps identity inside your tenant. It holds the permissions the app has been granted, such as the right to read all users' mail. It's a login that isn't a person, and it can be highly privileged.
+        Managed identity: A special identity for an Azure resource, like a virtual machine, with no password or secret for you to store or rotate. Traditionally, software needed a service account with a password sitting in a config file, waiting to be stolen. A managed identity removes that password, because Azure handles the credential automatically.
+
