@@ -1,0 +1,19 @@
+Continuing Section 16 of Dion Training as well as moving forward in Mike Chappel Sec+ book.
+
+Interesting threat intel from SANS Stormcast today, an advisory for Brevo was released detailing a ClickFix incident they had on their main site that was actually escalated at my work last week. Proofpoint TAP identified it as malware and then cleared the verdict once the script was removed. 
+https://status.brevo.com/incidents/01M2QBC4EZ24ZACW6SWQYVW8N3/write-up 
+
+CH6 App Security - Exploiting Web App Vulnerabilities:
+
+Cross Site Scripting (XSS): This allows for an attacker to inject their own HTML code into a web page. There are different types of XSS attacks.
+    Reflected XSS - Adding code to a form field that executes a script using <SCRIPT> </SCRIPT> HTML tags. 
+    Stored/Persistent XSS - Storing XSS scripting code on a remote web server.
+
+Request Forgery (CSRF/XSRF/SSRF) Request forgery exploits trust relationships and atempts to have users unwittingly execute commands against a remote server. They come in two forms, cross-site request forgery and server-side request forgery.
+    Cross-Site Request Forgery (CSRF/XSRF) - These exploit the trust that remote sites have in a user's system to execute commands on the user's behalf. Example: online banking site. An attacker who wants to steal funds from user accounts might go to an online forum and post a message containing a link. That link actually goes directly into the money transfer site that issues a command to transfer funds to the attacker's account. The attacker then leaves the link posted on the forum and waits for an unsuspecting user to come along and click the link. If the user happens to be logged into the banking site, the transfer succeeds.
+
+    Server-Side Request Forgery (SSRF) - these attacks exploit a similar vulnerability but instead of tricking a user's browser into visiting a URL, they trick a server into visiting a URL based on user-supplied input. SSRF attacks are possible when a web app accepts URLS from a user as input and then retrieves information from that URL. IF the server has access to non-public URLs, an SSRF attack can unintentionall disclose that information to an attacker.
+
+Retook CH6 from Mike Chappel Sec+ book and got an 18/20. the questions themselves tripped me up not because I lacked understanding of the concepts, but they were intentionally worded to make two answers seem correct though I picked the wrong one both times.
+
+CH7: 16/20 at first, read through cryptographic

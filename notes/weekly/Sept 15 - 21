@@ -1,0 +1,12 @@
+Section 16 of Dion training, and more review questions from Sec+ book
+
+# Sec+ Review Question Scoring
+CH2: 18/20, whiffed on nation state actors having more resources than organized crime. Unauthorized hacking is with malicious intent, semi-unauthorized is hacking without org's knowledge, but with good intent.
+
+CH3: 17/20: Code reviews are best preventative for logic bombs. If a rootkit is still present on a system but malware scans show nothing, mount the drive to a known good OS and perform a malware scan there. A potential insider threat with custom-made Python code should be viewed in a text editor, not decompiler and no AV will catch it as it doesn't match any signatures in their DB.
+
+CH4: 19/20: Misinformation campaigns are biggest with nation state hackers, watering hole attacks, BEC, and password spraying are broadly used by most other groups. Was down to a 50/50 on that one.
+
+CH5: 18/20: OSINT (WHOIS Lookups) is a form of passive reconnaissance. Anything that does not require active engagement with the target is a form of passive recon, all else is active recon. Any audit that will look into company financials cannot be internal and requires a third party- thus it is an external audit.
+
+CH6: 13/20: Need to brush up on AppSec terms and objectives.
