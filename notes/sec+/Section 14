@@ -1,0 +1,43 @@
+Section 14: Cyber Resilience and Redundancy - Objective 3.4
+
+Quiz: 3/5: Okay, got stumped on a question on the different RAID setups which is on me. The other one I missed was a very silly miss. "Which power backup technology typically provides a longer duration of power supply during extended outages and is often used as a primary source of backup power for critical systems, such as data centers?" I chose Uninterrupted power supply but the correct answer was a propane generator. UPS is the more civilized answer and what I anticipated to be correct but the long term usage is where a propane generator is the correct answer for extended outages. Will take the full course now.
+
+Cyber Resilience and Redundancy: Quick overview of what to expect for the subsequent modules, including a demonstration of setting up RAID for a server, as well as powering data centers and things like data backups and BCDR planning.
+
+High Availability: Regular spiel about high availability, keeping five 9's for server uptime, and methods for keeping datacenters running (UPS system for short outages, propane generators for entire datacenters for extended periods of time, RAID arrays, etc)
+
+Data Redundancy: Going through 5 different RAID configurations
+    RAID 0: Think data striping here, there's no data redundancy and honestly just improves performance. Example : video editing workstation with RAID 0 has faster read/write times with both disks than each disk independently.
+    RAID 1: Creates redundancy by having both disks contain the same data. Disk 1 and 2 will be completely the same so if one goes down, the other can maintain continuity. Think mirroring
+    RAID 5: RAID, striping with parity. Uses at least 3 storage devices. Can hot-swap drives on a server to replace old drives and uses parity of all other drives to rebuild.
+    RAID 6: RAID5 but with an extra parity part. 
+    RAID 10: Combines RAID 1 and 0, to be called RAID 10. Can function if 2 partitions are down, so long as they are in different mirrors.
+
+Configuring a RAID: Learned how to make a software RAID using windows disk management tool. Simply right clicking, adding striped volume for RAID0 and mirrored volume for RAID1.
+
+Capacity Planning: Defined as planning to meet future demands cost-effectively. Includes considerations for people, tech, infrastructure, and processes. Basically just having foresight for scaling up/down different parts of the business to meet potential future demands.
+
+Powering Data Centers: An 11 minute video on how powering a data center is achieved. Contained 5 keywords of note, surges, spikes, sags, undervoltage events, and full power loss events.
+    Surges: A small/unexpected increase in the voltage being provided.
+    Spikes: A short transient voltage that is usually caused by a short circuit, tripped breaker, power outage, or lightning strike.
+    Sags: A small and unexpected decrease in the voltage being provided. Opposite of a sag.
+    Undervoltage Events: This occurs when the voltage is reduced to lower levels and usually occur for a longer period of time. Think an extended sag. Also called a brownout.
+    Full power loss events: This is a total loss of power for a given period of time. Think a blackout.
+Using Line conditioners, UPSS, generators, and Power Distribution centers can help mitigate the issues that the above keywords create.
+    Line conditioners: this overcomes any power fluctuations in the power being received by a given system. It will correct surges or sags and change it to the standard power level when needed.
+    Power Distribution Centers: acts as a central hub where power is received and then distributed to all systems in the data center.
+
+Data Backups: The idea that you should never keep all your data in one place. You should consider different data backups and RAID configurations, to protect against data loss, corruption, unavailability, etc. Covered onsite vs offiste backups (self explanatory), journaling (the process of documenting all changes on a system's data that can be referenced later,) as well as replication and recovery.
+
+Continuity of Operations Plan: a Continuity of Operations Plan ensures an organization's ability to recover from disruptive events or disasters. Covers DR and BC plans.
+
+Redundant Site Considerations: Redundant site considerations, for in case the primary site goes down.
+    Hot Site: A fully equipped backup site ready to be cut over to quickly in the case of a primary site failure.
+    Warm Site: A semi-equipped backup site that can be cut over to not as quickly as a hot site. Takes a few days to be brought up to speed.
+    Cold Site: Cheapest option but slowest to bring up to speed. Could literally be an empty office with no network/phone lines/computers. An empty shell that could be turned into an HQ within a longer timeframe.
+    Mobile Site: Trailer or tent to deliver recovery capabilities. Can be hot/cold/warm. Fully contained, has everything you need. 
+    Virtual Site: Cloud based, highly flexible environment. Can be Hot/Warm/Cold as well.
+
+Resilience and Recovery Testing: This covers tabletop exercises and recovery testing to ensure that an organization is able to stand itself up/recover from a crisis.
+
+Quiz: 5/5.

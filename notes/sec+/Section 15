@@ -1,0 +1,61 @@
+## Section 15 - Security Architecture. Covers Objectives 2.3, 3.1 and 4.1.
+
+Quiz: 9/14. I figured going into this quiz I'd be missing things and with the course module names I wasn't instantly recognizing what each were. This will be a good section to review as I'll be learning instead of solidifying knowledge or filling gaps!
+
+Security Architecture: The design, structure and behavior of an org's security environment. Covers hardware, software, processes and people.
+
+On-premise vs. the Cloud: Talks on the difference between cloud computing and on-prem. Obviously, cloud is not your own machines and on prem does not have the scalability that cloud provides. But considerations into availability, responsiveness, recoverability, etc. were all touched on.
+
+Cloud Security: Discussing some of the issues with Cloud security, and how to combat them. Inlcudes 
+    Shared physical server vulnerabilities (multiple users share the same server, one user's compromise can affect other users on the same server. Strong hypervisor usage/patching helps)
+    Inadequate VE Security - Use secure VM templates, regularly monitoring, patching and updating VMs.
+    User Access Management - this can lead to unathorized access to sensitive data and systems. 
+    Lack of Up-to-date security measures - can leave the system vulnerable to new threats.
+    Single Points of Failure - can lead to a complete system outage for all users. Need redundancy
+    Unclear policies - lack of guidelines or procedures bogs down a response time and makes things harder to achieve.
+    Data remnants - leftover data from deletion or erasure procedures.
+
+Virtualization and Containerization: Virtualization (emulation of servers) and containerization (lightweight alternative to full machine virtualization). VM's operate on a hypervisor, which manages resources on the physical machine for the VMs. Type 1 hypervisor is bare metal/native. Runs directly on host hardware and functions like an OS. Type 2 hypervisor operates within a standards OS like Windows, Mac, or Linux. Type 1 is generally better than type 2. Containerization encapsulates an app into one container. Containers are separate and contain the app and all dependencies, but share the binaries and OS of the host machine.
+
+Serverless: by definition, this is a model where the responsibility of managing servers, databases, and some application logic is shifted away from developers. Big upside is cost reduction as you don't need to keep a physical server running when you're not running code. It's also easy to scale (AWS Lambda) but a downside is the Vendor Lock-in which is one of the most significant risks of serverless. Vendor Lock in means you need to stick to the proprietary interface of the vendor you choose, which limits flexibility on choosing other vendors in the future.
+
+Microservices: this architectural style breaks down larger applications to samller and independent services. Each service is self-contained and able to run independently. Netflix is the example given of a microservice architecture. It started as a monolithic application, but ran into scalability issues. To solve those issues, they broke down their app into microservices (recommendations, video encoding, user sign ups, etc.) Microservices benefits include scalability, flexibility, resilience, and faster deployment and updates. Challenges of microservices include complexity, data management, network latency, and security.
+
+Network Infrastructure: This section goes over some of the architecture considerations for network infra. Includes:
+    Physical Separation/Air gapping: Isolating a network by removing all direct or indirect connections from other networks. One of the most secure methodologies because you need to be physically in the space to interact with the infrastructure. Examples are military systems or ICS systems (industrial control systems)
+    Logical Separation: Creates boundaries within a network, restricting access to certain areas. Involves firewalls and VLANs. Needs a LOT more configuration to be successful.
+
+Software-Defined Network (SDN): This architecture enables efficient network configuration to improve performance and monitoring. Involves the following three planes:
+    Data Plane - Also called the forwarding plane, this is responsible for handling packets and makes decisions based on protocols. Concerned with the process of sending and receiving data.
+    Control Plane - The "brain" of the network, makes decisions where traffic is sent and is centralized in the SDN. 
+    Application Plane - the plane where all network apps interacting with the SDN controller reside.
+
+Infrastructure as Code (IaC): A methodology in which IT infrastructures are defined in code files that can be versioned, tested, and audited. YAML, JSON, and HashiCorp Configuration Language (HCL) are examples of this. Reduces Snowflake Systems (systems that are unique and the lack of consistency can introduce risks ) Idempotency is the ability of an operation to produce the same results as many times as it is executed.
+
+Centralized vs Decentralized Architectures: Centralized (all functions are coordinated and managed from a single location or authority) versus Decentralized (Computing functions are spread out across different systems or locations.)
+    Centralized benefits: Efficiency and Control, Consistency, Cost Effectiveness
+    Centralized risks: Single point of failure, Scalability Issues, Security Risks
+
+    Decentralized benefits: Resiliency, scalability, flexibility
+    Decentralized risks: Security risks, management challenges (complex coordination requirements), data inconsistency and synchronization.
+
+Internet of Things (IoT): The network of physical items with embedded systems that enables connection and data exchange. Think Alexa, smart home devices, internet connected coffee makers, etc.
+    Hub (control system) - the central point that connects all IoT devices and sends commands to them. Can be aphysical device like an alexa or software like an android hub app.
+
+ICS and SCADA: ICS (industrial control systems) and SCADA (supervisory control and data acquisition) systems
+    ICS - Control systems used to monitor and control industrial processes ranging from simple to complex systems. Think production lines, 
+        Distributed control systems - control production systems within a single location
+        Programmable Logic Controllers (PLCs) - used to control specific processes such as assembly lines within a factory.
+    SCADA - a type of ICS used to monitor and control industrial processes across geographically dispered locations. Examples include electrical power generation, transmission and distribution systems, water systems, etc. 
+
+
+Embedded Systems: a specialized computing component designed to perform dedicated functions within a larger structure. Incorporates both hardware and mechanical components. Example, smartphones, digital cameras, microwaves, etc. will use embedded systems to oversee critical functions. Using a Real-Time Operating System (RTOS) to ensure data processing in realtime, which is crucial for time-sensitive applications.
+    Risks/Vulnerabilities of Embedded systems - Hardware failure, software bugs, security vulnerabilities, and outdated systems. 
+
+To secure embedded systems, four key strategies are listed: Network segmentation, wrappers, firmware code control, and the challenges of patching.
+    Wrappers - these show only the entry and exit points of the data when travelling between networks. IPSec for example.
+    Firmware Code Control - this can be achieved through secure coding practices, code reviews, and automated testing.
+
+Embedded systems have the challenge of inability to patch in some cases if physical access is limited for example.
+
+Quiz: 15/15.

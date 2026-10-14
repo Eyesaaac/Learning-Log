@@ -1,0 +1,11 @@
+## Section 18 - Vulnerabilities and Attacks (Covers Objectives 2.2, 2.3, 2.4, 2.5, & 4.1)
+
+Quiz: 5/5, was not familiar with Bluejacking/Bluesnarfing/Bluebugging so will review that course but otherwise this will be a quick one.
+
+Bluetooth Attacks: Different vulnerabilities within Bluetooth connectivity. Insecure Pairing, Device Spoofing, and On-Path attacks are all examples here.
+    Bluejacking: pranking/recon on a device by sending unwanted Bluetooth messages to a device.
+    Bluesnarfing: Attempted unauthorized access to a bluetooth device to steal information.
+    Bluebugging: Bluesnarfing but attempting to take over the device using bluetooth.
+    Bluesmack: DDoS over bluetooth
+    Blueborne: Targets devices over bluetooth, infects multiple devices at once.
+

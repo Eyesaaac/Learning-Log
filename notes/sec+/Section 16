@@ -1,0 +1,98 @@
+## Section 16, Security Infrastructure (Objectives 3.2 and 4.5)
+
+Quiz 3/5. Need to understand EAP/SD-WAN/SASE acronyms, and UTM security solution. Into it we go!
+
+Security Infrastructure: The hardware, software, policies, and practices that orgs use to protect their information. Covered generally what will be going on throughout the rest of the section.
+
+Ports and Protocols: between 0-65535, sectioned off into 3:
+    Well Known [0-1023] - (HTTPS - 443, Telnet - 23)
+    Registered Ports [1024 - 49151] - (SQL - 1433, RDP - 3389)
+    Dynamic and Private Ports [49152 - 65535] - Temporary outbound connections. Used in gaming, IM, chat, etc.
+Protocols are rules governing device comms and data exchange. HTTP/HTTPS are protocols.
+
+# Common ports and protocols, TCP/UDP support and basic descriptions:
+21 - FTP - TCP - Used to transfer files from host to host
+22 - SSH/SCP/SFTP - TCP - Secure remote terminal access and file transfer capabilities, secure copy functions and secure file transfer
+23 - Telnet - TCP - Insecure remote control of another machine using text-based environment. Older SSH.
+25 - SMTP - TCP - Send emails over the network
+53 - DNS - TCP/UDP - translates domain names into IP addresses.
+69 - TFTP - UDP - lightweight file transfer method for sending config files or networking booting of an OS.
+80 - HTTP - TCP - insecure web browsing.
+88 - Kerberos - UDP - network auth protocol
+110 - POP3 - TCP - retrieving email from a server
+119 - NNTP - TCP - Accessing newsgroups
+135 - RPC - TCP/UDP - facilitates comms between system processes
+137-139 - NETBIOS - TCP/UDP - networking protocol suite, used inside windows domain env
+143 - IMAP - TCP - Allows access to email messages on a server
+161 - SNMP - UDP - Manages network devices
+162 - SNMP Trap - UDP - Responsible for sending SNMP trap messages
+389 - LDAP - TCP - Facilitates directory services
+443 - HTTPS - TCP - Secure web communication
+445 - SMB - TCP - file and printer sharing over a network
+465/587 - SMTPS - TCP - Secure SMTP communication
+514 - Syslog - UDP - Sending log messages
+636 - LDAP Secure (LDAPS) - TCP - LDAP Communication over SSL/TLS
+993 - IMAPS - TCP - Secure email retrieval, secure version of IMAP over SSL/TLS
+995 - POP3S - TCP - Secure email retrieval, secure version of POP3 over SSL/TLS
+1433 - Microsoft SQL - TCP - Facilitates comms with Microsoft SQL Server
+1645/1646 - RADIUS TCP - TCP - Used for remote authentication, authorization and accounting.
+1812/1813 - RADIUS UDP - UDP - Used for authentication and accounting as defined by the Internet Engineering Task Force
+3389 - RDP - TCP - Enables remote desktop access
+6514 - Syslog TLS - TCP - Secure syslog that uses SSL/TSL to encrypt IP packets using a cert before sending them across the network to the syslog collector.
+
+
+Firewalls: Safeguards networks by monitoring and controlling traffic. Can be hardware appliances or specialized software installed on a device to control network traffic.
+Layer 4 firewalls are packet filtering firewalls that just look at headers of traffic and not the entire picture. They cannot prevent certain attacks due to limited inspection capabilities in the packet header, but the tradeoff is that they do not hinder throughput as much as a firewall with in-depth inspection. Stateful firewalls monitor all inbound and outbound network connnections and requests. They will also know if an outbound request is made from our network for example. Proxy firewalls are intermediaries between internal and external connections, making connections on behalf of other endpoints. Two types, Circuit Layer (layer 5) and Application Level (layer 7) Kernel proxy firewalls are known as 5th gen firewall and has minimal impact on network performance while thoroughly inspecting packets across all layers.
+    Next Gneration Firewall (NGFW) - Aims to address the limiitations of tradiditonal firewalls by being more aware of apps and their behaviors. Can conduct deep packet inspection for traffic. Operates fast with minimal network performance impact. Offers full stack traffic visibility. Integrates with various security products.
+    Unified Threat Management Firewall (UTM) - Provides the ability to conduct multiple security functions in a single appliance. A do-it-all type of solution, where they are a firewall, IPS, antivirus and antispam, VPN, content filtering, load balancing and DLP solution all in one. They are a single point of failure though.
+    Web App Firewall (WAF) - Focuses on the inspection of the HTTP traffic. Can be installed inline (between network firewall and web servers) or out-of-band (receives mirrored copy of web server traffic, non intrusive.)
+
+Configuring Firewalls: Just a walkthrough of Windows/Mac firewall configurations, Windows using a Netgear router and Windows Firewall settings, and Mac using a regular macbook's firewall settings.
+
+IDS and IPS: IDS (Intrusion Detection System) and IPS (Intrusion Protection System). Both looking for bad activity on a host/network/domain. Biggest difference is what they do when they find something suspicious/malicious.
+    IDS - Logs and alerts. 3 types, NIDS/HIDS/WIDS: Network, Hardware, Wireless IDS.
+    IPS - Logs, alerts, and takes action. Place right behind the firewall to analyze all traffic.
+
+Network Appliances: goes over the hardware devices on a network and what they do in relation to specific networking services.
+    Load Balancer - Distributes network or application traffic across multiple servers. Balances traffic load and will automatically route traffic away from a server if it stops responding. Creates redundancy and maximizes throughput. 
+    Proxy Servers - An intermediary between client and server to do things like content caching, request filtering and login management. They store a copy of the data being accessed to make retrieval easier next time a request comes in. They also add additional layers of security and help with stability and reliability by masking the true endpoints inside the network. Integral in load balancing process, facilitating the smooth operation of a high-availability network.
+    Sensors - Monitors, detects, and analyzes traffic and data flow across a network. Tracks network performance like traffic spikes and whatnot, but also similar to IDS/IPS. Ex: alerting network admins to a DDOS attack as they see the high traffic.
+    Jump Servers -  A dedicated gateway to securely access devices located in different security zones in a network. Intermediary station to access servers and network stations inside a trusted network. They restrict direct access to protected devices or servers.
+
+Port Security: A common security feature on switches that allow admins to restrict which devices can connect to a specific port based on the NIC MAC address of the device. Switches use intelligence to prevent collisions on networks. Port Security links MAC addresses from a device to a specific interface.
+    Full Duplex: Able to send/receive traffic at the same time. Switches are full duplex, hubs are not. Hubs stupid, switches smart. Switches have a CAM table (Content Addressable Memory) that stores information about the MAC addresses that are available on any given port of the switch.
+    
+    802.1x is a top notch defense against unauthorized access on the network.
+
+    Extensible Authentication Protocl (EAP): There are 6 variants of EAP that will have different requirements for authenticating to a network. They range from simple passwords, to certificates, to smart cards, one is Cisco proprietary. At its core, EAP is a flexible framework that lets networks support lots of different authentication methods, not just passwords. Think of EAP as the "universal adapter" for network authentication, working behind the scenes every tiem a device tries to prove it belongs on the network.
+
+Securing Network Communications: 3 main categories for securing virtual networks. VPN, TLS, and IPSec.
+    Full Tunnel vs Split Tunnel VPN: Can be used for site-to-site or client-to-site connections.
+        Full Tunnel : Encrypts all traffic to the HQ while integrating clients with the network. Used by most orgs by default. Best security.
+        Split Tunnel : Divides traffic and network requests and then routes them to the appropriate network. Best performance.
+    
+    TLS (Transport Layer Security): A protocol that provides cryptographic security for secure connections and is used for secure web browsing and data transfer. DTLS is Datagram Transport Layer Security, which essentially just uses UDP protocol instead of TCP which regular TLS uses, and somehow has the same level of security while being faster.
+
+    IPSec: A protocol suite for secure comms through auth and data encryption in IP networks. Provides Confidentiality, Integrity, Authentication, and Anti-replay. Functions in Transport Mode (normally used for client-to-site VPNs, advantageous when dealing with MTU constraints) or Tunneling Mode (site-to-site VPNs, can prove difficult with MTU constraints if you can't support jumbo frames or mess with MTU size.)
+
+    By default in most networks, MTU (Maximum Transmission Unit) is only set to 1500 bytes, this may cause fragmentation and VPN problems.
+
+SD-WAN and SASE: Software-Defined Wide Area Network and Secure Access Service Edge
+    SD-WAN: Virtualized approach to managing and optimizing wide area network connections to efficiently route traffic between remote sites, data centers, and cloud environments.Can be managed entirely inside your own software, and can use any other WAN connections you want to create a virtual WAN. Great use case for a large organization that has many branch offices that are all moving to be more cloud native.
+
+    SASE: Used to consolidate numerous networking and security functions into a single cloud-native service to ensure that secure and seamless access for end-users can be achieved. A new type of architecture, that combines security and WAN together. SASE includes a wide variety of securit services too, like Firewalls, VPNs, Zero-Trust Network Access, and CASBs.
+
+Infrastructure Considerations: Considerations include correct placement of devices, security zones and screened subnets, understanding attack surface, determining connectivity methods, understanding device attributes, and configuring the failure mode.
+    Device placement (routers, switches, aps) - will ensure optimal data flow, minimal latency, and ensure security.
+    Security zones and screened subnets - creating buffer zones between internal/external networks. Screened subnets are no longer considered DMZs, though they used to be. Screened subnets host public facing services such as web, email, and DNS servers. They safeguard against breaches by preventing attackers from gaining direct access to the sensitive core internal network.
+    Attack Surface - all the points where an unauthorized user can enter data to or extract data from an environment. As networks grow and get more complex, the attack surface will expand. A larger attack surface means a higher risk.
+    Determining Connectivity Methods - Wired? Wireless? VPN? Satellite Connections? How will each choice change flexibility and scalability, or security vulnerabilities?
+    Understanding Device Attributes - Active/Passive devices, and if it will be placed in-line or as a tap/monitor. Active = IPS, Router, Firewall. Passive = IDS, network sensors, etc.
+    Configuring Failure Mode - If something goes wrong, do you want to fail-open or fail-closed?
+
+Selecting Infrastructure Controls: Goes over some key principles, methodologies, or best practices for selecting effective controls. 
+    Key Principles - Least Privilege, Defense in Depth, Risk-based Approach, Lifecycle Management, and Open Design (create transparency and accountability through rigorous testing and scrutiny of infrastructure and controls)
+    Methodology - Assess current state, perform a gap analysis, set a clear objective on what you want to do with new controls, benchmarking to compare your org versus competitors, conduct a cost-benefit analysis, and involve stakeholders, and finally implement monitoring and feedback loops.
+    Best Practices - Conduct a comprehensive risk assessment, align control framework with something like ISO or NIST guidelines, customize framework controls for your own usage and use cases, emphasize stakeholder engagement and training.
+
+Quiz: 5/5.

@@ -1,0 +1,49 @@
+## Identity and Access Management (IAM) Solutions. Covers Objectives 2.4 and 4.6.
+
+Quiz: 4/5. I know what password spraying is, the wording of the question had me choose a dictionary attack first.
+
+Identity and Access Management: The systems and processes used to manage access to information in an org. Revolves around identification, authentication, authorization and accounting. Other concepts include provisioning and deprovisioning, identity proofing, interoperability, and attestations.
+    Identity Proofing : The process of verifying the identity of a user before an account is created.
+    Interoperability : The ability of different systems, devices, and applications to work together and share information. (ex: SAML or OpenID Connect)
+    Attestations : Validating that user accounts and access rights are correct and up-to-date. 
+
+Multifactor Authentication: A system that requires more than one method of authentication from independent categories of credentials to verify a user's identity. Goes off 5 categories.
+    Knowledge-based Factor: Something you know
+    Possession-based Factor: Something you have (yubikey, smart card, etc.)
+    Inherence-based Factor: Something you are (biometrics that are unique to individuals)
+    Behavior-based Factor: Something you do (IP address verification/GPS tracking/access point restrictions)
+    Location-based Factor: Somewhere you are (keystroke patterns, mouse movement, or even the way they walk down the hallways)
+
+Password Security: Self Explanatory. Use a long and complex password to keep yourself secure. Set local password policy using gpedit, but for domain joined devices you can just use GPOs.
+
+Password Attacks: Different types of password attacks including brute forcing, password spraying, dictionary attacks, etc.
+
+Single Sign-On (SSO): Authentication processes. SSO works based on a trusted relationship that is established between an app and an Identity Provider (IdP).
+    IdP: a system that creates, maintains and manages identity information in a network.
+    LDAP (Lightweight Directory Access Protocol): Used to access and maintain distributed directory information services over an Internet protocol network. Can look up encryption certs, connected printers on a network, etc. Also used in authentication and serves as a central repo for user information. Also stores group memberships and roles for a user.
+    OAuth (Open Authorization): Open standard for token-based authentication and authorization that allows an individual's account information to be used by third-party services without exposing the user's password.
+    SAML (Security Assertion Markup Language): A standard for logging users into apps based on their sessions in another context. Allows services to separate from IdP and removes the need for direct user auth.
+    
+    Workflow: Starts by logging in at Domain Controller -> Attempts to access secondary app/website that has trusted relationship with the primary provider. Ex: internal sharepoint server won't ask for your password because you're already authed at the DC.
+
+
+Federation: Linking of identities and attributes to store information across multiple distinct identity management systems. More like SSO than a password reuse type of situation. Works by using the trust relationships that exist between different systems. Lets suppliers or customers authenticate using their own network credentials. 
+    
+    Login initiation -> Redirect to IdP -> Auth the user -> Generation of an assertion -> Returning to service provider -> Verification and Access.
+
+Privileged Access Management (PAM): Restricting and monitoring privileged accounts within an IT environment. Refers to the policies/procedures/controls.
+    Just-In-Time Permissions(JIT): A model where admin access is only given when needed for a specific period of time. Get admin when you need it for a task, and have it revoked when the task is done.
+    Password Vaulting: Storing and managing passwords in a secure environment, like a digital vault. Think 1Password or LastPass for admin accounts/root accounts.
+    Temporal Accounts : Time-limited access to resources and are auto disabled or deleted after a certain period of time. Ex: contractor account that auto deactivates once their contract is up.
+
+Access Control Models: Goes through 5 of the types of access control models.
+    Mandatory Access Control (MAC): Access that is strictly just to specific resources. Complex to configure, hard to maintain. If something isn't explicitly allowed, it's forbidden. Ex: Having a secret clearance gives access to everything under Top Secret, and not Top Secret.
+    Discretionary Access Control: Resource's owner determines which users can access each resource. Ex: Begging Eng team to get a Securonix account.
+    Role-based Access Control: Access based on user's roles and using those roles to grant permissions to resources. Ex: A group for Accounting and HR, based on each group/role they will have different access to tools. Used to enforce minimum privileges. Used for places with high rate of turnover.
+    Rule-based Access Control (RBAC): Enables admins to apply security policies to all users. Ex: ACLs are set up on firewalls/routers and affect all users on a given segment.
+    Attribute-based Access Control (ABAC): Uses object characteristics to make a decision. Things like time of access, location of data, users access level, creation date of file or object, data sensitivity, etc.
+
+Assigning Permissions: Covers how access control works in an org. Ex: hotel room manager giving hotel keys to people for access to specific areas of the hotel. Talked about principle of least privilege as well.
+    UAC (User Account Control): A mechanism designed to ensure that actions requiring administrative rights are explicitly authorized by the user.
+
+Quiz: 5/5.
