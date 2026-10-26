@@ -1,0 +1,39 @@
+## Section 19 - Malicious Activity (Objective 2.4)
+
+Quiz: 3/5: Was not expecting to get questions on types of DDoS attacks or DNS attacks. Will do better next time.
+
+Distributed Denial of Service (DDOS): Goes over types of DDoS attacks. 
+    Flood attacks: things like ICMP echo request (ping flood) or SYN flood (TCP request with spoofed IP so server syn ACK's to spoofed IP and gets held up)
+    Permanent DDoS: An exploit on a security flaw by reflashing a firmware, permanently breaking the network device. Reboots wont bring the device back online. 
+    Fork Bomb: A large number of processes are created by an attacker to use up a computer's available processing power. It is *not* a worm because it doesn't infect programs or use the network to spread. 
+
+    DDoS Amplification Attack: A specialized DDoS that allows an attacker to initiate DNS requests from a spoofed IP to flood a website. 
+
+    
+Domain Name System (DNS) Attacks: Different types of DNS attacks.
+    DNS Cache Poisoning : Changing entries in a DNS resolver's table by giving false information
+    DNS Amplification: Similar to DDoS Amplification, initiating a DNS request using a spoofed IP to get a large volume of data from the DNS resovler to the victim IP that was spoofed.
+    DNS Tunneling: Using DNS over port 53 to encase non-DNS traffic, trying to evade firewall rules for C&C or data exfil.
+    Domain Hijacking: Unauthorized altering of a domain name's registration. Ex: altering the info for amazon.com to redirect traffic to a malicious amazon to steal PCI.
+    DNS Zone Transfer: an attacker tries to get a copy of the DNS zone data which includes all of the DNS records for the domain. 
+
+Directory Traversal Attack: an injection attack that allows access to commands, files, and directories that might not be connected to the web document root directory or not.
+* anything with ../ indicates a directory traversal attack. Local file inclusions are a type of directory traversal * 
+
+Execution and Escalation Attack: Arbitrary Code Execution, Remote Code Execution, Privilege Escalation, and Rootkits
+    Arbitrary Code Execution: A vuln that allows an attacker to run a code or module that exploits a vulnerability.
+    Remote Code Execution: A type of arbitrary code execution that allows an attacker to transmit code from a remote host to a victim host. Arbitrary is if you can touch the computer, remote is if you can do it over the internet.
+    Privilege Escalation: A user accesses or modifies specific resources that they are not entitled to normally access.
+    Rootkits: Malware that modifies things like kernel level files to conceal its presence. Precursor to malware, two types- Kernel and User mode.
+
+Replay Attacks: These attacks involve stealing creds or session cookies to then replay them at a later time to authenticate as you.
+
+Session Hijacking: Self explanatory title, these attacks are similar to replay attacks in that they have the same goal, but these are done in real time using session cookies.
+
+On-Path Attacks: an attack where a penetration tester puts their workstation logically between two hosts during the communication. they can intercept auth packets being sent/received and use them to take over the session. Includes ARP and DNS poisoning, rogue Wireless Access Points (WAP) and introduving a rogue hover/switch.
+
+Injection Attacks: Covered LDAP injection, command injection and process injection attacks.
+
+Indicators of Compromise (IoC): Talked about types of IoC's, nothing I wasn't aware of.
+
+Quiz: 5/5 this time.

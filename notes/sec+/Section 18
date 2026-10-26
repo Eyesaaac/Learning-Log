@@ -9,3 +9,7 @@ Bluetooth Attacks: Different vulnerabilities within Bluetooth connectivity. Inse
     Bluesmack: DDoS over bluetooth
     Blueborne: Targets devices over bluetooth, infects multiple devices at once.
 
+***If you see code snippets in the exam, take a moment to determine if it is XML, HTML, or JavaScript.***
+
+HTML - will have Image, Font or Href tags
+XML - Question, ID, Type, Element, Entity

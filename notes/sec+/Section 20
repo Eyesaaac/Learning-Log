@@ -1,0 +1,8 @@
+## Section 20 - Hardening (Objectives 2.5, 4.1, and 4.5)
+
+Quiz: 5/5: Light work. Going to take notes on some of the sections that I didn't immediately recognize but overall going to skip the fluff of things like Patch Management, changing default configurations, restricting applications, unnecessary services, etc.
+
+Trusted Operating Systems: Designed to provide a secure computing environment by enforcing strict security policies that usually relay on mandatory access controls. Basically talks about types of OS's that have security controls in place (SELinux for example).
+
+Group Policies: Jason just walked through how to create a GPO using the Group Policy Editor, example this time was to create a deny rule for any executables running from the Temp folder. Easy stuff.
+
